@@ -13,7 +13,6 @@ const ProjectCardList = props => {
       const res = await axios.get(`http://localhost:5555/api/projects`)
       const projectList = res.data
       setProjects(projectList)
-      // console.log(projectList)
     } catch (err) {
       console.log(err)
     }
@@ -47,7 +46,7 @@ const ProjectCardList = props => {
           {projectCards}
         </Card.Group>
       </Segment>
-      <Link exact to='/create-project'>
+      <Link to='/create-project'>
         Create a new Project
       </Link>
     </Container>
